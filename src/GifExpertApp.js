@@ -3,7 +3,7 @@ import AddCategory from "./components/AddCategory";
 import { GifList } from "./components/GifList";
 
 const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["One Punch"]);
+  const [categories, setCategories] = useState(["cat"]);
 
   return (
     <>

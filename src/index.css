@@ -4,6 +4,8 @@
 
 body {
   padding: 60px;
+  background-color: black;
+  color: #fff;
 }
 
 input {
@@ -13,8 +15,11 @@ input {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+
   align-content: center;
-  border: 1px solid grey;
+  
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -26,8 +31,9 @@ input {
   text-align: center;
 }
 
-.card img {
+.card .card-image {
   max-height: 170px;
+  
 }
 
 .card-list {

@@ -6,11 +6,9 @@ const AddCategory = ({ setCategories }) => {
   const handleChange = (ev) => {
     setInputValue(ev.target.value);
   };
-
+  //modifico el estado de categories con el callback y le anado el nuevo valor del input. Ojo, las props solo reciben la funcion del setState, no el array.
   const handleSubmit = (ev) => {
     ev.preventDefault();
-
-    //modifico el estado de categories con el callback y le anado el nuevo valor del input. Ojo, las props solo reciben la funcion del setState, no el array.
 
     if (inputValue.trim().length > 2) {
       setCategories((categories) => [inputValue, ...categories]);
@@ -22,8 +20,8 @@ const AddCategory = ({ setCategories }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} action="#">
-        <input type="text" value={inputValue} onChange={handleChange} />
+      <form className="form" onSubmit={handleSubmit} action="#">
+        <input className="form-input" placeholder="cat" type="text" value={inputValue} onChange={handleChange} />
       </form>
     </>
   );
